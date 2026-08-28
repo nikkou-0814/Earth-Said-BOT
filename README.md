@@ -1,14 +1,15 @@
 # EarthSaid
 
+> [!WARNING]
+>## このプロジェクトは開発が終了しています！
+> 以降アップデートはされません。
+> 
+> また、正しく動作する保証もありません。
+
 <div style="text-align: center;">
-    <img src="screenshot.png" alt="Kyoshin Report BOT Screenshot" style="max-width: 100%; height: auto;">
+    <img src="screenshot.png" alt="Discord Screenshot" style="max-width: 100%; height: auto;">
 </div>
 ※現在のものではありません
-
-> [!WARNING]
->## 始める前に
-> プログラミング弱者が作ったコードなのでエラーが発生する可能性があります。
-> 環境によっては起動できない可能性があります。
 
 ## 環境構築
 
@@ -79,49 +80,8 @@ AccuracyBoolean=<Boolean>
 ### False
 `False`の場合は震源の精度、深さの精度、マグニチュードの精度をEEWのメッセージに追加しません。
 
-## ```testdata.json```の記述(Wolfx APIの仕様)
-### このリポジトリを改造、改良する方向け
-> [!NOTE]
-> 一部翻訳がおかしい項目があります
-
-|**項目**|**説明**|**コード内で使用しているか**|
-|--------|--------|------------------------|
-|**type**|JMA_EEW|NO|
-|**title**|緊急地震速報|NO|
-|**codeType**|緊急地震速報の説明|NO|
-|**issueSource**|発表機関|NO|
-|**issueStatus**|状態|NO|
-|**eventID**|イベントID|NO|
-|**serial**|報数|YES|
-|**announcedTime**|発表時間|YES|
-|**originTime**|地震発生時間|YES|
-|**hypocenter**|震源地|YES|
-|**latitude**|震源地の緯度|NO|
-|**longitude**|震源地の経度|NO|
-|**magnitude**|マグニチュード|YES|
-|**depth**|震源の深さ|YES|
-|**maxIntensity**|最大震度|YES|
-|**accuracyEpicenter**|震央の精度|YES|
-|**accuracyDepth**|震源の深さの精度|YES|
-|**accuracyMagnitude**|マグニチュードの精度|YES|
-|**maxIntChangeString**|最大震度の変更に関する説明|NO|
-|**maxIntChangeReason**|最大震度の変更理由|NO|
-|**warnAreaChiiki**|警報が出された地域|YES|
-|**warnAreaShindo1**|地域の最大震度|NO|
-|**warnAreaShindo2**|地域の最小震度|NO|
-|**warnAreaTime**|警報が出された時間|NO|
-|**warnAreaType**|警報の種類（「予報」/「警報」）|YES|
-|**warnAreaArrive**|地震波が到達したか|NO|
-|**isSea**|海域の地震か|NO|
-|**isTraining**|訓練か|NO|
-|**isAssumption**|仮定震源か|YES|
-|**isWarn**|警報か|YES|
-|**isFinal**|最終報か|YES|
-|**isCancel**|取消報か|YES|
-|**originalText**|気象庁からの原文|NO|
-
 ## 注意
-このリポジトリを使用する際に発生した<ins>損害については、私は責任を負いません</ins>。十分に注意してご利用ください。
+このリポジトリを使用する際に発生した<ins>損害については、開発者は一切責任を負いません</ins>。十分に注意してご利用ください。
 
 > [!WARNING]
 >## テストデータに関する注意
@@ -130,12 +90,10 @@ AccuracyBoolean=<Boolean>
 >テストデータは本来開発をしやすくする目的で導入しています。（```@silent```でのメッセージするようにしています。）
 >
 >このリポジトリ内のプログラムを改造してテストデータであることを知らせる記述を削除し、
->サーバーメンバーを混乱させる行為は絶対にしないでください。
+>サーバーメンバーを混乱させる行為などは絶対にしないでください。
 
 ## 謝礼
 
-### 地震情報API > P2PQuake JSON API v2
-
-### 緊急地震API > Wolfx API
-
-### テストデータ > dmdata.jp 緊急地震速報イベント一覧 より一部改変
+- 地震情報API > P2PQuake JSON API v2
+- 緊急地震API > Wolfx API
+- テストデータ > dmdata.jp 緊急地震速報イベント一覧 より一部改変
